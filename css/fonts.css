@@ -1,0 +1,46 @@
+@font-face {
+    font-family: "Gotham Pro";
+    src: url(../fonts/Gotham/GothaProNarMed.otf);
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gotham Pro Medium";
+    src: url(../fonts/Gotham/GothaProNarMed.otf);
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gotham Pro Bold";
+    src: url(../fonts/Gotham/GothaProNarBol.otf);
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gotham Pro Light";
+    src: url(../fonts/Gotham/GothaProLig.otf);
+}
+
+@font-face {
+    font-family: "PF DinText Pro Light Italic";
+    src: url(../fonts/PFDinTextPro/PFDinTextPro-LightItalic.ttf);
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "PF DinText Pro Bold Italic";
+    src: url(../fonts/PFDinTextPro/PFDinTextPro-BoldItal.ttf);
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "PF DinText Pro Medium Italic";
+    src: url(../fonts/PFDinTextPro/PFDinTextPro-MedItalic.ttf);
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "PF DinText Pro Italic";
+    src: url(../fonts/PFDinTextPro/PFDinTextPro-Italic.ttf);
+    font-style: italic;
+}

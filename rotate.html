@@ -1,0 +1,111 @@
+<!doctype html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>rotate()</title>
+
+    <style type="text/css" media="screen">
+        img, canvas { border: 1px solid black; }
+    </style>
+
+
+    <script type="text/javascript">
+
+        function rotate(p_deg) {
+            if(document.getElementById('canvas')) {
+                /*
+                 Non IE
+                 */
+                var image = document.getElementById('image');
+                var canvas = document.getElementById('canvas');
+                var canvasContext = canvas.getContext('2d');
+
+                switch(p_deg) {
+                    default :
+                    case 0 :
+                        canvas.setAttribute('width', image.width);
+                        canvas.setAttribute('height', image.height);
+                        canvasContext.rotate(p_deg * Math.PI / 180);
+                        canvasContext.drawImage(image, 0, 0);
+                        break;
+                    case 90 :
+                        canvas.setAttribute('width', image.height);
+                        canvas.setAttribute('height', image.width);
+                        canvasContext.rotate(p_deg * Math.PI / 180);
+                        canvasContext.drawImage(image, 0, -image.height);
+                        break;
+                    case 180 :
+                        canvas.setAttribute('width', image.width);
+                        canvas.setAttribute('height', image.height);
+                        canvasContext.rotate(p_deg * Math.PI / 180);
+                        canvasContext.drawImage(image, -image.width, -image.height);
+                        break;
+                    case 270 :
+                    case -90 :
+                        canvas.setAttribute('width', image.height);
+                        canvas.setAttribute('height', image.width);
+                        canvasContext.rotate(p_deg * Math.PI / 180);
+                        canvasContext.drawImage(image, -image.width, 0);
+                        break;
+                };
+
+            } else {
+                /*
+                 IE
+                 */
+                var image = document.getElementById('image');
+                switch(p_deg) {
+                    default :
+                    case 0 :
+                        image.style.filter = 'progid:DXImageTransform.Microsoft.BasicImage(rotation=0)';
+                        break;
+                    case 90 :
+                        image.style.filter = 'progid:DXImageTransform.Microsoft.BasicImage(rotation=1)';
+                        break;
+                    case 180 :
+                        image.style.filter = 'progid:DXImageTransform.Microsoft.BasicImage(rotation=2)';
+                        break;
+                    case 270 :
+                    case -90 :
+                        image.style.filter = 'progid:DXImageTransform.Microsoft.BasicImage(rotation=3)';
+                        break;
+                };
+
+            };
+        };
+
+
+        window.onload = function() {
+            var image = document.getElementById('image');
+            var canvas = document.getElementById('canvas');
+            if(canvas.getContext) {
+                image.style.visibility = 'hidden';
+                image.style.position = 'absolute';
+            } else {
+                canvas.parentNode.removeChild(canvas);
+            };
+
+            rotate(0);
+        };
+
+    </script>
+
+</head>
+
+<body>
+
+
+<p>
+    rotate:
+    <input type="button" value="0&#176;" onclick="rotate(0);" />
+    <input type="button" value="90&#176;" onclick="rotate(90);" />
+    <input type="button" value="180&#176;" onclick="rotate(180);" />
+    <input type="button" value="-90&#176;" onclick="rotate(-90);" />
+</p>
+
+
+<p>
+    <img id="image" src="http://www.google.com/intl/en_ALL/images/logo.gif" alt="" />
+    <canvas id="canvas"></canvas>
+</p>
+</body>
+</html>
