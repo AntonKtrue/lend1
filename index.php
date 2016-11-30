@@ -608,7 +608,7 @@
 
     }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCISfiihH513IR1y30a8BDaq8FN_DQI6ok&callback=myMap"></script>
 <script>
     $(function ($) {
         $(".card").flip({
