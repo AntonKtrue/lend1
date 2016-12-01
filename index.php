@@ -145,7 +145,7 @@
                                 <div class="left-block">
                                     <div class="login-button">
                                         <img src="img/login.png" style="color: #f0c84b">
-                                        <span class="dashed-underline login-text">Личный кабинет</span>
+                                        <span class="dashed-underline login-text"><span>Личный кабинет<span></span>
                                     </div>
                                     <div class="the-end">
                                         <div class="row1">Санкт-Петербург: +7 (812) 407-15-18</div>
