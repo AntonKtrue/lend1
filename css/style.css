@@ -150,6 +150,9 @@ nav > div > .wrapper {
 .left-block .login-button {
     margin-top: 25px;
 }
+.login-button {
+    cursor: pointer;
+}
 .header-flex {
     width: 960px;
     height: 115px;
